@@ -45,4 +45,4 @@ def Todas_las_Raíces (x, decimales=5):
     return raíces
 
 raíces = Todas_las_Raíces(x)
-print(raíces)
+print("las raices del polinomio son: " +str(raíces))
