@@ -97,8 +97,9 @@ def coeficientes(x, X, Y, freno_iteraciones=100, precision=1e-10):
     c= 1.0
     x3_suma= (-2*c)/(b-math.sqrt((b**2)-4*a*c))
     fx3=math.e**(-x3_suma) -x3_suma
-    
+    X_nuevo=[]
     it = 0
+    Y_nuevo=[]
     while  it < freno_iteraciones and abs(fx3)<precision:
         
         sum_ = Y[0]
@@ -132,13 +133,29 @@ def coeficientes(x, X, Y, freno_iteraciones=100, precision=1e-10):
                              x3=(-2*c)/(b+math.sqrt((b**2)-4*a*c))
         
         fx3= math.e**(x3) -x3
-       
-    return fx3 
+        it+=1
+        for i in len(X):
+            X_nuevo[i]=X[i+1]
+            X.add(-1, x3)  
+        for i in len(X):
+            Y_nuevo[i]=Y[i+1]
+            Y.add(-1, fx3)
+            
+        X=X_nuevo
+        Y=Y_nuevo
+        
+              
+    nuevo_polinomio=InterpolacionNewton(X,Y,x)
+        
+    return nuevo_polinomio
+
+
 x = sym.symbols('x')
 X = np.array([0, 1, 2])
 Y = np.array([1, -0.632, -1.865])    
 print(coeficientes(x, X, Y, freno_iteraciones=100, precision=1e-10)) 
-        
-        
-        
+
+nueva_raiz=Newton_Raphson(coeficientes(x, X, Y, freno_iteraciones=100, precision=1e-10),Derivada,1.)
+
+print(nueva_raiz)
            
