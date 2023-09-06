@@ -155,7 +155,7 @@ X = np.array([0, 1, 2])
 Y = np.array([1, -0.632, -1.865])    
 print(coeficientes(x, X, Y, freno_iteraciones=100, precision=1e-10)) 
 
-nueva_raiz=Newton_Raphson(coeficientes(x, X, Y, freno_iteraciones=100, precision=1e-10),Derivada,1.)
+nueva_raiz=Newton_Raphson(coeficientes(x, X, Y, freno_iteraciones=100, precision=1e-10),Derivada,1.,freno_iteraciones=100,precision=1e-8)
 
 print(nueva_raiz)
            
