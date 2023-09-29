@@ -157,6 +157,7 @@ def Laguerre_1(n):
     suma= np.sum(Weights*f1(Roots))
     return suma
 
+print("El primer peso es")
 primer_peso=Laguerre_1(10)
 print(primer_peso)
 
@@ -165,6 +166,7 @@ def Laguerre_2(n):
     suma= np.sum(Weights*f2(Roots))
     return suma
 
+print("El segundo peso es")
 segundo_peso=Laguerre_2(10)
 print(segundo_peso)
 
@@ -175,6 +177,7 @@ def Laguerre_3(n):
     suma= np.sum(Weights*f3(Roots))
     return suma
 
+print("El resultado para un polinomio de grado 3 es: ")
 ultimo=Laguerre_3(20)
 print(ultimo)
 
