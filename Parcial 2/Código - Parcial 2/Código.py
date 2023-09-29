@@ -170,6 +170,15 @@ print(segundo_peso)
 
 f3=lambda x: x**3
 
+def Laguerre_3(n):
+    Roots,Weights=np.polynomial.laguerre.laggauss(n)
+    suma= np.sum(Weights*f3(Roots))
+    return suma
+
+ultimo=Laguerre_3(20)
+print(ultimo)
+
+
 
 
 
