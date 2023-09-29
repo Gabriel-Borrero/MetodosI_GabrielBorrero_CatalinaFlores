@@ -36,6 +36,7 @@ for i in range(n):
 
 #Integral del numerador utilizando cuadratura de Legendre:
 n = 20
+
 a=(h*V1)/(Kb*T)
 b=(h*V0)/(Kb*T)
 def Integral(n, b, a):
@@ -145,7 +146,6 @@ print("El polinomio de orden 2 es: ")
 print(GetLaguerreRecursive(2, x))
 print("Las dos raíces del segundo polinomio son")
 print(GetAllRootsGLag(2))
-x_l=GetAllRootsGLag(2)
 
 
 x = sym.symbols('x')
