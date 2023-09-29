@@ -57,7 +57,7 @@ print("la fracción de rayos UV en términos de porcentaje es: "+str(f))
 "Esto se debe a que la radiación solar emitida por el sol (12% aprox) al pasar por la atmósfera, sufre un proceso de"
 "debilitamiento por la difusión, reflexión en las nubes y de absorción por las moléculas de gases"
 "(como el ozono y el vapor de agua) y por partículas en suspensión, la radiación solar alcanza la superficie"
-"terrestre oceánica y continental que la refleja o la absorbe"
+"terrestre oceánica y continental que la refleja o la absorbe, por ello se pierde cierto porcentaje de radiación"
 
 
 #Parte teórica. 
