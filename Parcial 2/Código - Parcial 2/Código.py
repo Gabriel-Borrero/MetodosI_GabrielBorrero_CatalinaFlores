@@ -49,7 +49,7 @@ def Integral(n, b, a):
     
     return I_num
 
-I_num=Integral(n, b, a)
+I_num=Integral(n, b, a)1
 f=(I_num/I_dem)*100
 print("la fracción de rayos UV en términos de porcentaje es: "+str(f))
 
